@@ -1,0 +1,1 @@
+let abfsda:Object = {nameL:'bob'}
