@@ -5,6 +5,13 @@ exports.default = {
     increment: function () {
         return { type: types.INCREMENT };
     },
+    incrementDelay: function () {
+        return function (dispatch, getState) {
+            setTimeout(function () {
+                dispatch({ type: types.INCREMENT });
+            }, 1000);
+        };
+    },
     decrement: function () {
         return { type: types.DECREMENT };
     }

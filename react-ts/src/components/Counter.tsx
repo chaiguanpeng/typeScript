@@ -5,16 +5,18 @@ import {Store} from '../types'
 interface IProps{   //属性的type
     number:number,
     increment:any,
-    decrement:any
+    decrement:any,
+    incrementDelay:any
 }
 //顺序是写死的，先属性，后状态 (Iprops,IState)
 class Counter extends React.Component<IProps>{
     render(){
-        let {number,increment,decrement} = this.props;
+        let {number,increment,decrement,incrementDelay} = this.props;
         return (
             <div>
                 <p>{number}</p>
                 <button onClick={increment}>+</button>
+                <button onClick={incrementDelay}>1s后加1</button>
                 <button onClick={decrement}>-</button>
             </div>
         )

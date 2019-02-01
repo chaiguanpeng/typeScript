@@ -23,10 +23,11 @@ var Counter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Counter.prototype.render = function () {
-        var _a = this.props, number = _a.number, increment = _a.increment, decrement = _a.decrement;
+        var _a = this.props, number = _a.number, increment = _a.increment, decrement = _a.decrement, incrementDelay = _a.incrementDelay;
         return (React.createElement("div", null,
             React.createElement("p", null, number),
             React.createElement("button", { onClick: increment }, "+"),
+            React.createElement("button", { onClick: incrementDelay }, "1s\u540E\u52A01"),
             React.createElement("button", { onClick: decrement }, "-")));
     };
     return Counter;
